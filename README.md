@@ -1,16 +1,52 @@
-# React + Vite
+# 📍 Trackerly
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
+![Stripe](https://img.shields.io/badge/Stripe-626CD9?style=for-the-badge&logo=Stripe&logoColor=white)
 
-Currently, two official plugins are available:
+Trackerly is a modern, premium web application built with React and Vite that allows users to seamlessly track locations via phone numbers. It features a stunning glassmorphism design system, secure authentication, multi-language support, and integrated payment flows.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- **High-Precision Tracking:** Core interface to track devices leveraging placeholder API connectivity.
+- **Premium UI/UX:** A bespoke glassmorphism design system with custom CSS variables, highly reusable React components (`FeatureCard`, `PricingCard`, `Button`), and smooth micro-animations.
+- **Robust State Management:** Redux Toolkit orchestrates API calls (`createAsyncThunk`) and caches session data globally.
+- **Secure Authentication:** Token-based login and signup flows protected by manual browser-cookie utilities and `<ProtectedRoute>` React Router wrappers.
+- **Multi-language Support (i18n):** Integrated `i18next` providing instantaneous localization between English and Spanish.
+- **Stripe Payments:** `Elements` wrapper enabling secure transaction sandboxing on the Payment route.
+- **Dynamic Dashboard:** A protected user dashboard analyzing tracking history and account metrics.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend Framework:** React 18, Vite
+- **Routing:** React Router DOM (v6)
+- **State Management:** Redux Toolkit (`react-redux`)
+- **Localization:** `i18next`, `react-i18next`
+- **Payments:** Stripe (`@stripe/stripe-js`, `@stripe/react-stripe-js`)
+- **HTTP Client:** Axios
+- **Styling:** Vanilla CSS (CSS Variables, Flexbox/Grid, Glassmorphism)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📂 Project Structure
+
+```text
+src/
+├── components/
+│   ├── features/    # Cards and complex UI blocks (PricingCard, FeatureCard)
+│   └── shared/      # Global layout components (Navbar, Footer, Button, ProtectedRoute)
+├── locales/         # i18n JSON translation files (en, es)
+├── pages/           # Route-level views (Home, Dashboard, Login, TrackLocation, etc.)
+├── store/           # Redux setup
+│   ├── index.js     # Store configuration
+│   └── slices/      # Redux slices (authSlice, locationSlice)
+├── utils/           # Helper functions
+│   ├── api.js       # Axios instance & interceptors
+│   ├── cookies.js   # Browser cookie storage handlers
+│   └── validation.js# Input format validators
+├── App.jsx          # Root routing configuration
+├── index.css        # Global CSS design tokens
+└── main.jsx         # React DOM entry point & Providers
+```
+
+## 📄 License
+This project is proprietary and confidential. All rights reserved by Trackerly Inc.
