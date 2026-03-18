@@ -1,0 +1,7 @@
+{
+  "welcome": "Welcome to Location Tracker",
+  "track_prompt": "Enter a phone number to track its location.",
+  "phone_placeholder": "+1 234 567 8900",
+  "track_button": "Track Location",
+  "payment_title": "Secure Payment"
+}

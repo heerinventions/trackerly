@@ -1,0 +1,7 @@
+{
+  "welcome": "Bienvenido al Rastreador de Ubicación",
+  "track_prompt": "Ingrese un número de teléfono para rastrear su ubicación.",
+  "phone_placeholder": "+1 234 567 8900",
+  "track_button": "Rastrear Ubicación",
+  "payment_title": "Pago Seguro"
+}
